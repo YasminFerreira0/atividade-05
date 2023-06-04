@@ -13,31 +13,31 @@ verificar e responder se a matriz é um quadrado mágico.*/
 {
     int mat[3][3], i, j, soma_l, soma_c, soma_dp, soma_ds;
 
+    soma_l = 0;
     soma_c = 0;
     soma_dp = 0;
     soma_ds = 0;
-    soma_l = 0;
 
     printf("\nInfomre os valores da matriz.\n");
-    for(i=0; i<3; i++){
-        for(j=0; j<3; j++){
+    for(i=0; i<5; i++){
+        for(j=0; j<5; j++){
             scanf("%d", &mat[i][j]);
         }
     }
 
-    for(i=0; i<3; i++){
-        for(j=0; j<3; j++){
+    for(i=0; i<5; i++){
+        for(j=0; j<5; j++){
             soma_l = soma_l + mat[i][j];
         }
     }
 
-    for (j=0; j<3; j++){
-        for (i=0; i<3; i++){
+    for (j=0; j<5; j++){
+        for (i=0; i<5; i++){
             soma_c = soma_c + mat[i][j];
         }
     }
 
-    for (i=0, j=3-1; i<3; i++, j--){
+    for (i=0, j=5-1; i<5; i++, j--){
         soma_dp = soma_dp + mat[i][i];
         soma_ds = soma_ds + mat[i][j];
     }
