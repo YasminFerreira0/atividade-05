@@ -11,7 +11,7 @@ Exemplo: A matriz a seguir é um quadrado mágico.
 Faça um programa para ler uma matriz 5x5 de números inteiros. A seguir, o programa deverá
 verificar e responder se a matriz é um quadrado mágico.*/
 {
-    int mat[3][3], i, j, soma_l, soma_c, soma_dp, soma_ds;
+    int mat[5][5], i, j, soma_l, soma_c, soma_dp, soma_ds;
 
     soma_l = 0;
     soma_c = 0;
@@ -54,7 +54,7 @@ verificar e responder se a matriz é um quadrado mágico.*/
         soma_ds = soma_ds + mat[j][i];
     }
 
-    if ( soma_l == soma_c && soma_c == soma_dp && soma_dp == soma_ds){
+    if (soma_c == soma_dp && soma_dp == soma_ds){
         printf("\nA matriz e um quadrado magico.");
     }else{
         printf("\nA matriz nao e um quadrado magico.");
