@@ -1,7 +1,6 @@
 
 #include <stdio.h>
 int main()
-
 /*Dado um tabuleiro de xadrez onde, para facilitar a indicação das pedras, vamos convencionar:
     1 – Peões 
     2 – Torres 
