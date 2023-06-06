@@ -26,20 +26,32 @@ verificar e responder se a matriz é um quadrado mágico.*/
     }
 
     for(i=0; i<5; i++){
+        soma_l = 0;
         for(j=0; j<5; j++){
             soma_l = soma_l + mat[i][j];
         }
     }
-
-    for (j=0; j<5; j++){
-        for (i=0; i<5; i++){
-            soma_c = soma_c + mat[i][j];
+    if (i ==0){
+        soma_c = soma_l;
+    }else{
+        if ( soma_l != soma_c){
+            printf("\nA matriz nao e um quadrado magico.\n");
         }
     }
 
-    for (i=0, j=5-1; i<5; i++, j--){
+    for (j=0; j<5; j++){
+        soma_l = 0;
+        for (i=0; i<5; i++){
+            soma_l = soma_l + mat[i][j];
+        }
+    }
+    if ( soma_l != soma_c){
+        printf("\nA matriz nao e um quadrado magico.\n");
+    }
+
+    for (i=0, j=4; i<5; i++, j--){
         soma_dp = soma_dp + mat[i][i];
-        soma_ds = soma_ds + mat[i][j];
+        soma_ds = soma_ds + mat[j][i];
     }
 
     if ( soma_l == soma_c && soma_c == soma_dp && soma_dp == soma_ds){
@@ -47,8 +59,5 @@ verificar e responder se a matriz é um quadrado mágico.*/
     }else{
         printf("\nA matriz nao e um quadrado magico.");
     }
-
-
-
 
 }
